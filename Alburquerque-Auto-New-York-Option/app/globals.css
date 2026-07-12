@@ -1,0 +1,261 @@
+@import "tailwindcss";
+
+:root { --ink:#08080a; --panel:#111116; --purple:#9b5cff; --violet:#6d28d9; --lav:#c4a1ff; --paper:#f1f0ec; --muted:#aaa6b4; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--ink); color:var(--paper); font-family:Arial, Helvetica, sans-serif; overflow-x:hidden; }
+a { color:inherit; text-decoration:none; }
+button,input,select,textarea { font:inherit; }
+.site-header { height:88px; display:flex; align-items:center; padding:0 4vw; border-bottom:1px solid #ffffff16; position:absolute; z-index:20; width:100%; gap:36px; }
+.brand { display:flex; align-items:center; gap:12px; margin-right:auto; }
+.brand img { width:52px; height:52px; object-fit:cover; border-radius:50%; box-shadow:0 0 24px #8b5cf644; }
+.brand span { display:flex; flex-direction:column; letter-spacing:.11em; font-size:13px; line-height:1.05; }
+.brand small { color:var(--lav); letter-spacing:.43em; margin-top:5px; }
+.nav { display:flex; gap:30px; color:#d0ccd6; font-size:13px; text-transform:uppercase; letter-spacing:.13em; }
+.nav a { transition:.25s; }
+.nav a:hover { color:var(--lav); }
+.header-cta { border:1px solid #ffffff35; padding:13px 18px; font-size:12px; letter-spacing:.08em; text-transform:uppercase; transition:.25s; }
+.header-cta:hover { background:var(--purple); border-color:var(--purple); }
+.menu-button { display:none; }
+.hero { min-height:900px; position:relative; padding:180px 7vw 90px; overflow:hidden; background-image:linear-gradient(90deg,rgba(3,3,6,.96) 0%,rgba(5,4,8,.8) 39%,rgba(7,5,12,.18) 72%),linear-gradient(0deg,rgba(6,4,9,.78) 0%,transparent 42%),url('/ny-garage-hero.png'); background-size:cover; background-position:center; }
+.hero:after { content:"NEW YORK  /  NEW YORK  /  NEW YORK"; position:absolute; right:-260px; top:410px; color:#ffffff12; font-size:96px; font-weight:900; letter-spacing:.08em; transform:rotate(90deg); white-space:nowrap; }
+.hero-glow { position:absolute; width:430px; height:430px; border:1px solid #b794f644; border-radius:50%; right:9%; top:205px; box-shadow:0 0 120px #7c3aed33,inset 0 0 90px #7c3aed18; z-index:1; opacity:.45; }
+.hero-glow:before,.hero-glow:after { content:""; position:absolute; border:1px solid #ffffff20; border-radius:50%; inset:34px; }
+.hero-glow:after { inset:82px; border-color:#b794f650; }
+.eyebrow,.kicker { color:var(--lav); font-size:12px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; }
+.eyebrow { display:flex; align-items:center; gap:12px; position:relative; z-index:3; }
+.eyebrow span { width:42px; height:1px; background:var(--purple); }
+h1 { font-size:clamp(72px,10vw,152px); line-height:.81; letter-spacing:-.075em; margin:35px 0; max-width:930px; position:relative; z-index:3; font-weight:900; }
+h1 em,h2 em { color:var(--purple); font-style:normal; }
+.hero-copy { position:relative; z-index:3; max-width:590px; color:#c8c4ce; font-size:19px; line-height:1.65; }
+.hero-actions { display:flex; gap:12px; margin-top:34px; position:relative; z-index:3; }
+.button { padding:18px 24px; text-transform:uppercase; letter-spacing:.11em; font-size:12px; font-weight:700; }
+.button.primary { background:var(--purple); color:white; }
+.button.primary span,.submit span { margin-left:25px; }
+.button.secondary { border:1px solid #ffffff34; }
+.hero-stats { position:absolute; z-index:3; right:5vw; bottom:65px; display:flex; border-top:1px solid #ffffff22; }
+.hero-stats div { width:190px; padding:22px 20px 0; border-left:1px solid #ffffff22; display:flex; flex-direction:column; }
+.hero-stats strong { font-size:28px; letter-spacing:-.03em; }
+.hero-stats strong small { font-size:13px; color:var(--lav); }
+.hero-stats span { font-size:11px; color:var(--muted); margin-top:6px; text-transform:uppercase; letter-spacing:.1em; }
+.hero-mark { display:none; }
+.hero-mark span { font-size:245px; font-weight:900; color:#8b5cf633; line-height:1; }
+.marquee { overflow:hidden; background:var(--purple); color:white; transform:rotate(-1.5deg) scale(1.02); position:relative; z-index:5; }
+.marquee-track { display:flex; width:max-content; animation:marquee-rotate 24s linear infinite; will-change:transform; }
+.marquee-group { display:flex; align-items:center; flex-shrink:0; white-space:nowrap; padding:20px 0; font-weight:900; letter-spacing:.07em; font-size:18px; }
+.marquee i { margin:0 35px; font-size:11px; }
+.marquee:hover .marquee-track { animation-play-state:paused; }
+@keyframes marquee-rotate { to { transform:translateX(-50%); } }
+.ny-strip { min-height:340px; padding:58px 7vw; display:grid; grid-template-columns:.62fr 1.15fr .35fr; gap:5vw; align-items:center; background:#dedbd5; color:#101014; position:relative; overflow:hidden; }
+.ny-strip:before { content:""; position:absolute; inset:0; opacity:.08; background-image:linear-gradient(32deg,transparent 48%,#0a0a0d 49%,#0a0a0d 51%,transparent 52%),linear-gradient(122deg,transparent 48%,#0a0a0d 49%,#0a0a0d 51%,transparent 52%); background-size:110px 110px; }
+.street-sign { background:#17131d; color:white; padding:25px 30px; border-radius:5px; border:4px solid white; outline:2px solid #17131d; box-shadow:0 16px 35px #0003; transform:rotate(-2deg); position:relative; z-index:2; display:flex; flex-direction:column; }
+.street-sign small { color:var(--lav); letter-spacing:.19em; }
+.street-sign strong { font-size:34px; letter-spacing:.08em; margin:6px 0; }
+.street-sign span { font-size:9px; letter-spacing:.12em; color:#c9c5ce; }
+.ny-promise { position:relative; z-index:2; }
+.ny-promise span { color:#6d28d9; font-size:11px; font-weight:800; letter-spacing:.18em; }
+.ny-promise p { font-size:19px; line-height:1.65; max-width:720px; }
+.route-mark { position:relative; z-index:2; width:140px; height:165px; background:#7c3aed; clip-path:polygon(50% 0,92% 17%,87% 76%,50% 100%,13% 76%,8% 17%); display:flex; flex-direction:column; align-items:center; justify-content:center; color:white; }
+.route-mark b { font-size:13px; letter-spacing:.15em; }
+.route-mark strong { font-size:72px; line-height:.9; }
+.section { padding:125px 7vw; }
+.section-heading { display:grid; grid-template-columns:1.2fr .65fr; align-items:end; gap:60px; margin-bottom:60px; }
+.section-heading h2,.about h2,.booking h2,.contact h2 { font-size:clamp(44px,6vw,86px); line-height:.9; letter-spacing:-.06em; margin:18px 0 0; }
+.section-heading p { color:var(--muted); font-size:17px; line-height:1.7; }
+.service-grid { display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid #ffffff1d; border-left:1px solid #ffffff1d; }
+.service-card { min-height:335px; padding:32px; border-right:1px solid #ffffff1d; border-bottom:1px solid #ffffff1d; position:relative; transition:.35s; }
+.service-card:hover { background:#16111f; transform:translateY(-5px); box-shadow:0 22px 50px #0008; }
+.service-code { color:var(--purple); font-family:monospace; font-size:12px; }
+.service-line { width:32px; height:2px; background:var(--purple); margin:54px 0 25px; transition:.3s; }
+.service-card:hover .service-line { width:72px; }
+.service-card h3 { font-size:25px; margin:0 0 15px; text-transform:uppercase; }
+.service-card p { color:var(--muted); line-height:1.6; margin:0; max-width:330px; }
+.service-tag { position:absolute; bottom:28px; font-size:11px; color:var(--lav); text-transform:uppercase; letter-spacing:.12em; }
+.about { display:grid; grid-template-columns:1fr 1fr; min-height:850px; background:#eeeae5; color:#111; }
+.about-visual { background:linear-gradient(145deg,#20162f,#0a090c); position:relative; min-height:720px; overflow:hidden; display:grid; place-items:center; }
+.about-visual:after { content:""; position:absolute; width:480px; height:480px; border:1px solid #a855f766; border-radius:50%; box-shadow:0 0 100px #7c3aed55; }
+.photo-placeholder { width:72%; height:62%; border:1px solid #ffffff30; position:relative; z-index:2; display:flex; flex-direction:column; align-items:center; justify-content:center; color:#ffffff70; letter-spacing:.22em; }
+.photo-placeholder:before,.photo-placeholder:after { content:""; position:absolute; height:1px; width:145%; background:#ffffff24; transform:rotate(42deg); }
+.photo-placeholder:after { transform:rotate(-42deg); }
+.photo-placeholder small { margin-top:10px; font-size:10px; letter-spacing:.12em; }
+.experience-badge { position:absolute; z-index:3; bottom:50px; right:0; background:var(--purple); width:180px; height:180px; display:flex; flex-direction:column; justify-content:center; padding:28px; }
+.experience-badge strong { font-size:38px; }
+.experience-badge span { font-size:12px; text-transform:uppercase; letter-spacing:.12em; line-height:1.5; }
+.about-copy { padding:110px 7vw; align-self:center; }
+.about-copy .kicker { color:#6d28d9; }
+.about-copy .lead { font-size:24px; line-height:1.4; font-weight:700; border-left:4px solid var(--purple); padding-left:22px; margin:34px 0; }
+.about-copy>p:not(.lead) { color:#55505b; line-height:1.75; font-size:16px; }
+.values { margin-top:38px; border-top:1px solid #0002; }
+.values>div { display:flex; gap:20px; padding:20px 0; border-bottom:1px solid #0002; }
+.values b { color:#7c3aed; font-family:monospace; }
+.values span { display:flex; flex-direction:column; gap:4px; }
+.values strong { text-transform:uppercase; letter-spacing:.08em; }
+.values small { color:#716b75; }
+.process { background:#0c0c0f; }
+.section-heading.compact { margin-bottom:50px; }
+.process-row { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:#ffffff1c; }
+.process-row>div { background:#0c0c0f; padding:34px; min-height:250px; }
+.process-row span { display:grid; place-items:center; width:42px; height:42px; border:1px solid var(--purple); border-radius:50%; color:var(--lav); font-family:monospace; }
+.process-row h3 { text-transform:uppercase; margin-top:42px; font-size:17px; }
+.process-row p { color:var(--muted); line-height:1.6; font-size:14px; }
+.booking { padding:120px 7vw; display:grid; grid-template-columns:.78fr 1.22fr; gap:8vw; background:radial-gradient(circle at 15% 50%,#2c104f 0,transparent 32%),#111015; }
+.booking-info>p { color:#b8b4bf; line-height:1.7; max-width:540px; }
+.policy-note { margin-top:40px; border:1px solid #ffffff22; padding:20px; display:flex; flex-direction:column; gap:8px; max-width:520px; }
+.policy-note b { color:var(--lav); font-size:11px; letter-spacing:.15em; }
+.policy-note span { color:#aaa6b4; font-size:13px; line-height:1.5; }
+.booking-form { background:#f1f0ec; color:#18171b; padding:50px; box-shadow:0 30px 90px #0008; }
+.booking-form label { display:flex; flex-direction:column; gap:9px; font-size:11px; text-transform:uppercase; letter-spacing:.12em; font-weight:700; margin-bottom:22px; }
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+.booking-form input,.booking-form select,.booking-form textarea { background:transparent; border:0; border-bottom:1px solid #24202740; padding:12px 2px; color:#18171b; outline:none; text-transform:none; letter-spacing:normal; font-weight:400; resize:vertical; }
+.booking-form input:focus,.booking-form select:focus,.booking-form textarea:focus { border-color:var(--purple); }
+.booking-form .check { flex-direction:row; text-transform:none; letter-spacing:0; font-weight:400; line-height:1.5; color:#5f5964; }
+.check input { accent-color:var(--purple); }
+.submit { width:100%; border:0; background:#7c3aed; color:white; padding:19px; font-weight:800; text-transform:uppercase; letter-spacing:.13em; cursor:pointer; }
+.form-fine { display:block; color:#77717b; line-height:1.5; margin-top:15px; }
+.success { min-height:490px; display:flex; flex-direction:column; justify-content:center; align-items:flex-start; }
+.success>span { width:54px; height:54px; display:grid; place-items:center; border-radius:50%; background:var(--purple); color:white; font-size:25px; }
+.success h3 { font-size:34px; text-transform:uppercase; margin-bottom:4px; }
+.success p { color:#615b66; line-height:1.7; }
+.success button { border:1px solid #7c3aed; color:#7c3aed; background:transparent; padding:13px 18px; cursor:pointer; }
+.gallery { background:#e9e6e1; color:#111; position:relative; }
+.gallery:after { content:"NY"; position:absolute; right:4vw; top:22px; font-size:230px; font-weight:900; color:#7c3aed0c; pointer-events:none; }
+.gallery .kicker { color:#6d28d9; }
+.gallery-grid { display:grid; grid-template-columns:1.4fr .8fr .8fr; gap:15px; min-height:450px; }
+.gallery-slot { border:1px solid #19161d33; padding:28px; display:flex; flex-direction:column; justify-content:flex-end; position:relative; overflow:hidden; background:linear-gradient(135deg,#dad5df,#b8afc5); }
+.gallery-slot:before { content:""; position:absolute; width:280px; height:280px; border:1px solid #6d28d966; border-radius:50%; right:-80px; top:-50px; }
+.gallery-slot span { position:absolute; left:25px; top:25px; font-family:monospace; color:#6d28d9; }
+.gallery-slot b { font-size:20px; }
+.gallery-slot small { color:#67616a; margin-top:5px; text-transform:uppercase; letter-spacing:.1em; }
+.contact { padding:120px 7vw; display:grid; grid-template-columns:1.3fr .7fr; gap:80px; background:#08080a; }
+.phone { display:flex; justify-content:space-between; border-bottom:1px solid #ffffff30; padding:25px 0 16px; font-size:clamp(28px,5vw,68px); font-weight:900; letter-spacing:-.05em; }
+.phone:hover { color:var(--purple); }
+.email { display:inline-block; margin-top:25px; color:var(--lav); border-bottom:1px solid var(--purple); padding-bottom:4px; }
+.hours { padding-top:30px; }
+.hours h3 { text-transform:uppercase; letter-spacing:.1em; font-size:14px; margin-bottom:22px; }
+.hours>div { display:flex; justify-content:space-between; gap:20px; border-top:1px solid #ffffff1e; padding:16px 0; font-size:13px; }
+.hours span { color:var(--muted); }
+.hours p { color:var(--lav); font-size:12px; text-transform:uppercase; letter-spacing:.13em; margin-top:25px; }
+
+/* New York motion system — each major section gets its own city crop. */
+.hero { animation:hero-city-drift 18s ease-in-out infinite alternate; }
+.hero-glow { animation:city-pulse 4.5s ease-in-out infinite; }
+.ny-strip,.services,.about,.process,.booking,.gallery,.contact { position:relative; overflow:hidden; isolation:isolate; }
+.ny-strip>* ,.services>* ,.about>* ,.process>* ,.booking>* ,.gallery>* ,.contact>* { position:relative; z-index:2; }
+.ny-strip:after { content:""; position:absolute; z-index:1; inset:-45% -15%; background:linear-gradient(110deg,transparent 44%,#7c3aed1f 49%,transparent 54%); animation:street-sweep 7s linear infinite; }
+.street-sign { animation:sign-float 4s ease-in-out infinite; }
+.route-mark { animation:route-turn 12s linear infinite; }
+
+.services { background-image:linear-gradient(90deg,#08080ca8,#08080cc4),url('/ny-section-atlas.png'); background-size:cover; background-position:38% center; }
+.services .section-heading,.services .service-card { text-shadow:0 2px 16px #000; }
+.services .service-card { background:#08080c70; backdrop-filter:blur(2px); }
+.services:before { content:""; position:absolute; z-index:1; inset:0; opacity:.16; background:repeating-linear-gradient(90deg,transparent 0 118px,#a855f744 120px,transparent 122px); animation:rail-drift 16s linear infinite; }
+.service-card:after { content:""; position:absolute; inset:0; background:linear-gradient(110deg,transparent 34%,#a855f712 49%,transparent 64%); transform:translateX(-120%); transition:transform .7s ease; pointer-events:none; }
+.service-card:hover:after { transform:translateX(120%); }
+
+.about { background-image:linear-gradient(90deg,#0a080d72 0 50%,#eeeae5d0 50%),url('/ny-section-atlas.png'); background-size:cover; background-position:left center; }
+.about:before { content:"NYC"; position:absolute; z-index:1; right:-3vw; top:4%; color:#6d28d90a; font-size:clamp(150px,28vw,430px); font-weight:900; line-height:.8; animation:ghost-type 9s ease-in-out infinite alternate; }
+.about-visual { background:linear-gradient(145deg,#20162f55,#0a090c77); }
+.about-visual:before { content:""; position:absolute; inset:-20%; background:linear-gradient(90deg,transparent 46%,#b794f622 50%,transparent 54%); animation:street-sweep 9s linear infinite; }
+.about-copy { background:#eeeae5d5; backdrop-filter:blur(4px); box-shadow:inset 28px 0 55px #eeeae5a8; }
+.experience-badge { animation:badge-bob 3.8s ease-in-out infinite; }
+
+.process { background-image:linear-gradient(#08080da3,#08080dc2),url('/ny-section-atlas.png'); background-size:cover; background-position:center center; }
+.process:before { content:""; position:absolute; z-index:1; inset:0; background:repeating-linear-gradient(0deg,transparent 0 54px,#ffffff08 55px),repeating-linear-gradient(90deg,transparent 0 54px,#ffffff08 55px); animation:grid-slide 12s linear infinite; }
+.process-row>div { background:#0c0c0f91; backdrop-filter:blur(3px); text-shadow:0 2px 12px #000; transition:background .3s,transform .3s; }
+.process-row>div:hover { background:#1a1127dc; transform:translateY(-7px); }
+.process-row span { animation:city-pulse 3.2s ease-in-out infinite; }
+.process-row>div:nth-child(2) span { animation-delay:.5s; }.process-row>div:nth-child(3) span { animation-delay:1s; }.process-row>div:nth-child(4) span { animation-delay:1.5s; }
+
+.booking { background-image:linear-gradient(90deg,#0c0911b0 0 42%,#0b081070),url('/ny-section-atlas.png'); background-size:cover; background-position:72% center; animation:booking-pan 20s ease-in-out infinite alternate; }
+.booking-info { padding:28px; margin:-28px; background:#09070db5; backdrop-filter:blur(3px); box-shadow:0 20px 60px #0005; }
+.booking:before { content:""; position:absolute; z-index:1; width:160%; height:3px; left:-30%; top:22%; background:linear-gradient(90deg,transparent,#a855f7,transparent); box-shadow:0 0 28px #a855f7; animation:light-train 8s linear infinite; opacity:.55; }
+.booking-form { animation:form-hover 6s ease-in-out infinite; backdrop-filter:blur(8px); }
+
+.gallery { background-image:linear-gradient(#e9e6e1b8,#e9e6e1d0),url('/ny-section-atlas.png'); background-size:cover; background-position:12% center; }
+.gallery .section-heading { padding:28px; margin:-28px -28px 32px; background:#f0ede8c4; backdrop-filter:blur(3px); }
+.gallery:before { content:""; position:absolute; z-index:1; inset:-30%; opacity:.13; background:repeating-radial-gradient(circle at center,transparent 0 46px,#6d28d9 48px,transparent 50px); animation:map-orbit 28s linear infinite; }
+.gallery-slot { background:linear-gradient(135deg,#dad5dfdc,#b8afc5e8); backdrop-filter:blur(8px); transition:transform .45s ease,box-shadow .45s ease; }
+.gallery-slot:hover { transform:translateY(-10px) rotate(-.5deg); box-shadow:0 26px 55px #32115c25; }
+.gallery-slot:before { animation:map-orbit 15s linear infinite; }
+
+.contact { background-image:linear-gradient(90deg,#07070aaa,#07070ac7),url('/ny-section-atlas.png'); background-size:cover; background-position:right center; animation:contact-pan 24s ease-in-out infinite alternate; }
+.contact-main,.hours { padding:25px; background:#07070a80; backdrop-filter:blur(3px); text-shadow:0 2px 18px #000; }
+.contact:before { content:""; position:absolute; z-index:1; inset:0; background:linear-gradient(105deg,transparent 25%,#7c3aed12 48%,transparent 70%); animation:street-sweep 11s linear infinite; }
+.phone span { display:inline-block; animation:arrow-run 1.8s ease-in-out infinite; }
+.hours>div { transition:padding .25s,color .25s; }.hours>div:hover { padding-left:9px; color:var(--lav); }
+
+@keyframes hero-city-drift { from{background-position:48% center} to{background-position:54% center} }
+@keyframes city-pulse { 0%,100%{box-shadow:0 0 0 #7c3aed00} 50%{box-shadow:0 0 32px #7c3aed66} }
+@keyframes street-sweep { from{transform:translateX(-35%)} to{transform:translateX(35%)} }
+@keyframes sign-float { 0%,100%{transform:rotate(-2deg) translateY(0)} 50%{transform:rotate(-1deg) translateY(-8px)} }
+@keyframes route-turn { to{transform:rotateY(360deg)} }
+@keyframes rail-drift { to{background-position:240px 0} }
+@keyframes ghost-type { from{transform:translateX(3%) rotate(-2deg)} to{transform:translateX(-3%) rotate(1deg)} }
+@keyframes badge-bob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+@keyframes grid-slide { to{background-position:54px 54px} }
+@keyframes booking-pan { from{background-position:64% center} to{background-position:82% center} }
+@keyframes light-train { from{transform:translateX(-60%)} to{transform:translateX(60%)} }
+@keyframes form-hover { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)} }
+@keyframes map-orbit { to{transform:rotate(360deg)} }
+@keyframes contact-pan { from{background-position:85% center} to{background-position:100% center} }
+@keyframes arrow-run { 0%,100%{transform:translate(0,0)} 50%{transform:translate(7px,-7px)} }
+
+footer { border-top:1px solid #ffffff1e; padding:38px 7vw; display:grid; grid-template-columns:1fr auto; gap:25px; align-items:center; color:#9994a1; }
+.footer-brand { display:flex; align-items:center; gap:12px; color:white; }
+.footer-brand img { width:48px; height:48px; border-radius:50%; }
+.footer-brand span { display:flex; flex-direction:column; font-size:12px; letter-spacing:.1em; }
+.footer-brand small { color:#8e8796; margin-top:5px; }
+.footer-links { display:flex; gap:22px; font-size:11px; text-transform:uppercase; letter-spacing:.1em; }
+footer>p { grid-column:1/-1; border-top:1px solid #ffffff12; padding-top:20px; font-size:11px; }
+
+@media(max-width:900px){
+  .site-header { height:74px; }
+  .header-cta { display:none; }
+  .menu-button { display:flex; flex-direction:column; gap:6px; background:none; border:0; z-index:22; }
+  .menu-button span { width:26px; height:1px; background:white; }
+  .nav { display:none; position:absolute; top:74px; left:0; right:0; padding:30px 7vw; background:#0b0a0e; flex-direction:column; }
+  .nav.open { display:flex; }
+  .hero { padding:150px 7vw 260px; min-height:820px; }
+  .ny-strip { grid-template-columns:1fr 1.4fr; }
+  .route-mark { display:none; }
+  .hero-mark,.hero-glow { opacity:.55; right:-140px; top:250px; }
+  .hero-stats { left:7vw; right:7vw; bottom:45px; }
+  .hero-stats div { flex:1; width:auto; padding-left:12px; }
+  .section-heading { grid-template-columns:1fr; gap:18px; }
+  .service-grid { grid-template-columns:1fr 1fr; }
+  .about { grid-template-columns:1fr; }
+  .about-visual { min-height:570px; }
+  .process-row { grid-template-columns:1fr 1fr; }
+  .booking { grid-template-columns:1fr; }
+  .gallery-grid { grid-template-columns:1fr 1fr; }
+  .gallery-slot:first-child { grid-column:1/-1; min-height:330px; }
+  .contact { grid-template-columns:1fr; }
+}
+@media(max-width:600px){
+  .brand span { display:none; }
+  .hero { min-height:860px; padding-top:135px; }
+  .hero { background-position:62% center; }
+  .ny-strip { grid-template-columns:1fr; padding:70px 7vw; }
+  h1 { font-size:65px; }
+  .hero-actions { flex-direction:column; align-items:stretch; }
+  .button { text-align:center; }
+  .hero-stats { flex-direction:column; border-top:0; gap:4px; }
+  .hero-stats div { padding:8px 0 8px 14px; border-top:1px solid #ffffff20; }
+  .hero-stats strong { font-size:19px; }
+  .section { padding:85px 6vw; }
+  .section-heading h2,.about h2,.booking h2,.contact h2 { font-size:49px; }
+  .service-grid { grid-template-columns:1fr; }
+  .service-card { min-height:300px; }
+  .about-copy { padding:80px 6vw; }
+  .process-row { grid-template-columns:1fr; }
+  .booking { padding:85px 5vw; }
+  .booking-form { padding:30px 22px; }
+  .form-row { grid-template-columns:1fr; gap:0; }
+  .gallery-grid { grid-template-columns:1fr; }
+  .gallery-slot,.gallery-slot:first-child { grid-column:auto; min-height:260px; }
+  .contact { padding:85px 6vw; }
+  footer { grid-template-columns:1fr; }
+  .footer-links { flex-wrap:wrap; }
+}
+
+@media(prefers-reduced-motion:reduce){ html{scroll-behavior:auto}.service-card,.service-line{transition:none}.marquee-track,.hero,.hero-glow,.ny-strip:after,.street-sign,.route-mark,.services:before,.about:before,.about-visual:before,.experience-badge,.process:before,.process-row span,.booking,.booking:before,.booking-form,.gallery:before,.gallery-slot:before,.contact,.contact:before,.phone span{animation:none} }
