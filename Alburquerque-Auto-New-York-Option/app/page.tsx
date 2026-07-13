@@ -117,11 +117,11 @@ export default function Home() {
           loop
           playsInline
           preload="auto"
-          poster="/Alburquerque_Auto/bridgeport-hero-landscape.jpg"
+          poster="/Alburquerque_Auto/bridgeport-hero-clean.jpg"
           aria-hidden="true"
         >
           <source
-            src="/Alburquerque_Auto/bridgeport-hero-landscape-web.mp4"
+            src="/Alburquerque_Auto/bridgeport-hero-web.mp4"
             type="video/mp4"
           />
         </video>
