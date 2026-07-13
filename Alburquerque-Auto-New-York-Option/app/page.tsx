@@ -61,7 +61,7 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="brand" href="#home" aria-label="Alburquerque Auto home">
-          <img src="/logo.png" alt="Alburquerque Auto logo" />
+          <img src="/Alburquerque_Auto/logo.png" alt="Alburquerque Auto logo" />
           <span>
             <strong>ALBURQUERQUE</strong>
             <small>NEW YORK AUTO</small>
@@ -508,7 +508,7 @@ export default function Home() {
 
       <footer>
         <div className="footer-brand">
-          <img src="/logo.png" alt="" />
+          <img src="/Alburquerque_Auto/logo.png" alt="" />
           <span>
             <strong>ALBURQUERQUE AUTO</strong>
             <small>Honesty and quality.</small>

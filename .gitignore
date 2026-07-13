@@ -4,3 +4,4 @@
 **/.wrangler/
 .env
 .env.local
+**/out/

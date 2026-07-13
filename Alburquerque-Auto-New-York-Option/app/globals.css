@@ -17,7 +17,7 @@ button,input,select,textarea { font:inherit; }
 .header-cta { border:1px solid #ffffff35; padding:13px 18px; font-size:12px; letter-spacing:.08em; text-transform:uppercase; transition:.25s; }
 .header-cta:hover { background:var(--purple); border-color:var(--purple); }
 .menu-button { display:none; }
-.hero { min-height:900px; position:relative; padding:180px 7vw 90px; overflow:hidden; background-image:linear-gradient(90deg,rgba(3,3,6,.96) 0%,rgba(5,4,8,.8) 39%,rgba(7,5,12,.18) 72%),linear-gradient(0deg,rgba(6,4,9,.78) 0%,transparent 42%),url('/ny-garage-hero.png'); background-size:cover; background-position:center; }
+.hero { min-height:900px; position:relative; padding:180px 7vw 90px; overflow:hidden; background-image:linear-gradient(90deg,rgba(3,3,6,.96) 0%,rgba(5,4,8,.8) 39%,rgba(7,5,12,.18) 72%),linear-gradient(0deg,rgba(6,4,9,.78) 0%,transparent 42%),url('/Alburquerque_Auto/ny-garage-hero.png'); background-size:cover; background-position:center; }
 .hero:after { content:"NEW YORK  /  NEW YORK  /  NEW YORK"; position:absolute; right:-260px; top:410px; color:#ffffff12; font-size:96px; font-weight:900; letter-spacing:.08em; transform:rotate(90deg); white-space:nowrap; }
 .hero-glow { position:absolute; width:430px; height:430px; border:1px solid #b794f644; border-radius:50%; right:9%; top:205px; box-shadow:0 0 120px #7c3aed33,inset 0 0 90px #7c3aed18; z-index:1; opacity:.45; }
 .hero-glow:before,.hero-glow:after { content:""; position:absolute; border:1px solid #ffffff20; border-radius:50%; inset:34px; }
@@ -145,40 +145,40 @@ h1 em,h2 em { color:var(--purple); font-style:normal; }
 .street-sign { animation:sign-float 4s ease-in-out infinite; }
 .route-mark { animation:route-turn 12s linear infinite; }
 
-.services { background-image:linear-gradient(90deg,#08080ca8,#08080cc4),url('/ny-section-atlas.png'); background-size:cover; background-position:38% center; }
+.services { background-image:linear-gradient(90deg,#08080ca8,#08080cc4),url('/Alburquerque_Auto/ny-section-atlas.png'); background-size:cover; background-position:38% center; }
 .services .section-heading,.services .service-card { text-shadow:0 2px 16px #000; }
 .services .service-card { background:#08080c70; backdrop-filter:blur(2px); }
 .services:before { content:""; position:absolute; z-index:1; inset:0; opacity:.16; background:repeating-linear-gradient(90deg,transparent 0 118px,#a855f744 120px,transparent 122px); animation:rail-drift 16s linear infinite; }
 .service-card:after { content:""; position:absolute; inset:0; background:linear-gradient(110deg,transparent 34%,#a855f712 49%,transparent 64%); transform:translateX(-120%); transition:transform .7s ease; pointer-events:none; }
 .service-card:hover:after { transform:translateX(120%); }
 
-.about { background-image:linear-gradient(90deg,#0a080d72 0 50%,#eeeae5d0 50%),url('/ny-section-atlas.png'); background-size:cover; background-position:left center; }
+.about { background-image:linear-gradient(90deg,#0a080d72 0 50%,#eeeae5d0 50%),url('/Alburquerque_Auto/ny-section-atlas.png'); background-size:cover; background-position:left center; }
 .about:before { content:"NYC"; position:absolute; z-index:1; right:-3vw; top:4%; color:#6d28d90a; font-size:clamp(150px,28vw,430px); font-weight:900; line-height:.8; animation:ghost-type 9s ease-in-out infinite alternate; }
 .about-visual { background:linear-gradient(145deg,#20162f55,#0a090c77); }
 .about-visual:before { content:""; position:absolute; inset:-20%; background:linear-gradient(90deg,transparent 46%,#b794f622 50%,transparent 54%); animation:street-sweep 9s linear infinite; }
 .about-copy { background:#eeeae5d5; backdrop-filter:blur(4px); box-shadow:inset 28px 0 55px #eeeae5a8; }
 .experience-badge { animation:badge-bob 3.8s ease-in-out infinite; }
 
-.process { background-image:linear-gradient(#08080da3,#08080dc2),url('/ny-section-atlas.png'); background-size:cover; background-position:center center; }
+.process { background-image:linear-gradient(#08080da3,#08080dc2),url('/Alburquerque_Auto/ny-section-atlas.png'); background-size:cover; background-position:center center; }
 .process:before { content:""; position:absolute; z-index:1; inset:0; background:repeating-linear-gradient(0deg,transparent 0 54px,#ffffff08 55px),repeating-linear-gradient(90deg,transparent 0 54px,#ffffff08 55px); animation:grid-slide 12s linear infinite; }
 .process-row>div { background:#0c0c0f91; backdrop-filter:blur(3px); text-shadow:0 2px 12px #000; transition:background .3s,transform .3s; }
 .process-row>div:hover { background:#1a1127dc; transform:translateY(-7px); }
 .process-row span { animation:city-pulse 3.2s ease-in-out infinite; }
 .process-row>div:nth-child(2) span { animation-delay:.5s; }.process-row>div:nth-child(3) span { animation-delay:1s; }.process-row>div:nth-child(4) span { animation-delay:1.5s; }
 
-.booking { background-image:linear-gradient(90deg,#0c0911b0 0 42%,#0b081070),url('/ny-section-atlas.png'); background-size:cover; background-position:72% center; animation:booking-pan 20s ease-in-out infinite alternate; }
+.booking { background-image:linear-gradient(90deg,#0c0911b0 0 42%,#0b081070),url('/Alburquerque_Auto/ny-section-atlas.png'); background-size:cover; background-position:72% center; animation:booking-pan 20s ease-in-out infinite alternate; }
 .booking-info { padding:28px; margin:-28px; background:#09070db5; backdrop-filter:blur(3px); box-shadow:0 20px 60px #0005; }
 .booking:before { content:""; position:absolute; z-index:1; width:160%; height:3px; left:-30%; top:22%; background:linear-gradient(90deg,transparent,#a855f7,transparent); box-shadow:0 0 28px #a855f7; animation:light-train 8s linear infinite; opacity:.55; }
 .booking-form { animation:form-hover 6s ease-in-out infinite; backdrop-filter:blur(8px); }
 
-.gallery { background-image:linear-gradient(#e9e6e1b8,#e9e6e1d0),url('/ny-section-atlas.png'); background-size:cover; background-position:12% center; }
+.gallery { background-image:linear-gradient(#e9e6e1b8,#e9e6e1d0),url('/Alburquerque_Auto/ny-section-atlas.png'); background-size:cover; background-position:12% center; }
 .gallery .section-heading { padding:28px; margin:-28px -28px 32px; background:#f0ede8c4; backdrop-filter:blur(3px); }
 .gallery:before { content:""; position:absolute; z-index:1; inset:-30%; opacity:.13; background:repeating-radial-gradient(circle at center,transparent 0 46px,#6d28d9 48px,transparent 50px); animation:map-orbit 28s linear infinite; }
 .gallery-slot { background:linear-gradient(135deg,#dad5dfdc,#b8afc5e8); backdrop-filter:blur(8px); transition:transform .45s ease,box-shadow .45s ease; }
 .gallery-slot:hover { transform:translateY(-10px) rotate(-.5deg); box-shadow:0 26px 55px #32115c25; }
 .gallery-slot:before { animation:map-orbit 15s linear infinite; }
 
-.contact { background-image:linear-gradient(90deg,#07070aaa,#07070ac7),url('/ny-section-atlas.png'); background-size:cover; background-position:right center; animation:contact-pan 24s ease-in-out infinite alternate; }
+.contact { background-image:linear-gradient(90deg,#07070aaa,#07070ac7),url('/Alburquerque_Auto/ny-section-atlas.png'); background-size:cover; background-position:right center; animation:contact-pan 24s ease-in-out infinite alternate; }
 .contact-main,.hours { padding:25px; background:#07070a80; backdrop-filter:blur(3px); text-shadow:0 2px 18px #000; }
 .contact:before { content:""; position:absolute; z-index:1; inset:0; background:linear-gradient(105deg,transparent 25%,#7c3aed12 48%,transparent 70%); animation:street-sweep 11s linear infinite; }
 .phone span { display:inline-block; animation:arrow-run 1.8s ease-in-out infinite; }
