@@ -64,7 +64,7 @@ export default function Home() {
           <img src="/Alburquerque_Auto/logo.png" alt="Alburquerque Auto logo" />
           <span>
             <strong>ALBURQUERQUE</strong>
-            <small>NEW YORK AUTO</small>
+            <small>Bridgeport AUTO</small>
           </span>
         </a>
         <button
@@ -99,18 +99,36 @@ export default function Home() {
       </header>
 
       <section className="hero" id="home">
+        <video
+          className="hero-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          poster="/Alburquerque_Auto/bridgeport-hero-clean.png"
+          aria-hidden="true"
+        >
+          <source
+            src="/Alburquerque_Auto/bridgeport-hero-web.mp4"
+            type="video/mp4"
+          />
+        </video>
+
+        <div className="hero-overlay" aria-hidden="true"></div>
+
         <div className="hero-glow" aria-hidden="true"></div>
         <div className="eyebrow">
-          <span></span> Independent automotive specialist · New York
+          <span></span> Independent automotive specialist · Bridgeport
         </div>
         <h1>
-          NEW YORK
+          Bridgeport
           <br />
           KEEPS <em>MOVING.</em>
         </h1>
         <p className="hero-copy">
           Your car should too. Diagnostics, repairs, maintenance, and
-          performance work built for New York miles—and the people who drive
+          performance work built for Bridgeport miles—and the people who drive
           them.
         </p>
         <div className="hero-actions">
@@ -133,7 +151,7 @@ export default function Home() {
             <span>Labor rate</span>
           </div>
           <div>
-            <strong>NY-READY</strong>
+            <strong>CT-READY</strong>
             <span>Multi-make expertise</span>
           </div>
         </div>
@@ -145,7 +163,7 @@ export default function Home() {
       <section className="marquee" aria-label="Core values">
         <div className="marquee-track">
           <div className="marquee-group">
-            <span>NEW YORK AUTOMOTIVE</span>
+            <span>Bridgeport AUTOMOTIVE</span>
             <i>◆</i>
             <span>HONESTY & QUALITY</span>
             <i>◆</i>
@@ -155,7 +173,7 @@ export default function Home() {
             <i>◆</i>
           </div>
           <div className="marquee-group" aria-hidden="true">
-            <span>NEW YORK AUTOMOTIVE</span>
+            <span>Bridgeport AUTOMOTIVE</span>
             <i>◆</i>
             <span>HONESTY & QUALITY</span>
             <i>◆</i>
@@ -167,22 +185,22 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="ny-strip" aria-label="New York service promise">
+      <section className="CT-strip" aria-label="Bridgeport service promise">
         <div className="street-sign">
           <small>LOCAL SERVICE</small>
-          <strong>NEW YORK</strong>
+          <strong>Bridgeport</strong>
           <span>ONE OWNER · ONE STANDARD</span>
         </div>
-        <div className="ny-promise">
+        <div className="CT-promise">
           <span>BUILT FOR THE CITY</span>
           <p>
             Stop-and-go traffic. Potholes. Heat, cold, salt, and long commutes.
-            New York asks a lot of a vehicle. Alburquerque Auto understands the
-            conditions—and fixes the cause, not just the symptom.
+            Bridgeport asks a lot of a vehicle. Alburquerque Auto understands
+            the conditions—and fixes the cause, not just the symptom.
           </p>
         </div>
         <div className="route-mark" aria-hidden="true">
-          <b>NY</b>
+          <b>CT</b>
           <strong>A</strong>
         </div>
       </section>
@@ -234,7 +252,7 @@ export default function Home() {
         <div className="about-copy">
           <span className="kicker">ABOUT ALBURQUERQUE AUTO</span>
           <h2>
-            NEW YORK DIRECT.
+            Bridgeport DIRECT.
             <br />
             <em>NO RUNAROUND.</em>
           </h2>
@@ -242,7 +260,7 @@ export default function Home() {
             “Let’s get that issue that’s in need of attention taken care of.”
           </p>
           <p>
-            Alburquerque Auto was built around a simple idea: New York clients
+            Alburquerque Auto was built around a simple idea: Bridgeport clients
             deserve to understand what is happening with their car. That means
             careful diagnostics, honest recommendations, and quality work across
             many different makes and models.
@@ -502,7 +520,7 @@ export default function Home() {
               <b>{time}</b>
             </div>
           ))}
-          <p>Proudly serving New York drivers.</p>
+          <p>Proudly serving Bridgeport drivers.</p>
         </div>
       </section>
 
@@ -527,8 +545,8 @@ export default function Home() {
           </a>
         </div>
         <p>
-          © {new Date().getFullYear()} Alburquerque Auto · New York. All rights
-          reserved.
+          © {new Date().getFullYear()} Alburquerque Auto · Bridgeport. All
+          rights reserved.
         </p>
       </footer>
     </main>
