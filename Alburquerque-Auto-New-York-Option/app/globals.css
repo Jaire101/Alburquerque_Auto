@@ -1542,77 +1542,72 @@ footer > p {
     animation: none;
   }
 }
-/* Phone hero-video layout */
+/* Mobile: title first, then landscape video */
 @media (max-width: 700px) {
   .hero {
-    --phone-video-height: clamp(210px, 56.25vw, 360px);
+    display: flex;
+    flex-direction: column;
 
     min-height: auto;
-    padding:
-      calc(var(--phone-video-height) + 32px)
-      6vw
-      42px;
-
+    padding: 125px 0 44px;
     background: #050507;
-    animation: none;
+    overflow: hidden;
   }
 
-  .hero-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: var(--phone-video-height);
-
-    object-fit: contain;
-    object-position: center;
-    background: #050507;
-
-    z-index: 0;
+  .hero .eyebrow,
+  .hero h1,
+  .hero-copy,
+  .hero-actions,
+  .hero-stats {
+    margin-left: 6vw;
+    margin-right: 6vw;
   }
 
-  .hero-overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: auto;
-    left: 0;
-
-    height: var(--phone-video-height);
-
-    background:
-      linear-gradient(
-        180deg,
-        rgba(5, 5, 7, 0.05) 0%,
-        rgba(5, 5, 7, 0.18) 65%,
-        #050507 100%
-      );
-
-    z-index: 1;
-  }
-
-  .hero > :not(.hero-video):not(.hero-overlay) {
-    position: relative;
-    z-index: 3;
+  .hero .eyebrow {
+    order: 1;
   }
 
   .hero h1 {
-    margin: 22px 0;
-    font-size: clamp(52px, 16vw, 76px);
+    order: 2;
+    margin-top: 24px;
+    margin-bottom: 28px;
+
+    font-size: clamp(50px, 15vw, 76px);
     line-height: 0.86;
+    word-break: normal;
+  }
+
+  .hero-video {
+    order: 3;
+
+    position: relative;
+    inset: auto;
+
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+
+    object-fit: cover;
+    object-position: center;
+
+    margin: 0 0 30px;
+    z-index: 2;
+    background: #050507;
   }
 
   .hero-copy {
-    max-width: 100%;
+    order: 4;
     font-size: 16px;
     line-height: 1.6;
   }
 
   .hero-actions {
+    order: 5;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    gap: 12px;
+    width: auto;
   }
 
   .hero-actions .button {
@@ -1621,13 +1616,21 @@ footer > p {
   }
 
   .hero-stats {
+    order: 6;
+
     position: relative;
     inset: auto;
 
     display: grid;
     grid-template-columns: 1fr;
 
-    width: 100%;
+    width: auto;
     margin-top: 30px;
+  }
+
+  .hero-overlay,
+  .hero-glow,
+  .hero::after {
+    display: none;
   }
 }

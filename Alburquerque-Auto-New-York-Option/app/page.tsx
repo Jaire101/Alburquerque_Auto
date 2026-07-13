@@ -99,22 +99,6 @@ export default function Home() {
       </header>
 
       <section className="hero" id="home">
-        <video
-          className="hero-video"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          poster="/Alburquerque_Auto/bridgeport-hero-clean.png"
-          aria-hidden="true"
-        >
-          <source
-            src="/Alburquerque_Auto/bridgeport-hero-web.mp4"
-            type="video/mp4"
-          />
-        </video>
-
         <div className="hero-overlay" aria-hidden="true"></div>
 
         <div className="hero-glow" aria-hidden="true"></div>
@@ -126,11 +110,27 @@ export default function Home() {
           <br />
           KEEPS <em>MOVING.</em>
         </h1>
+        <video
+          className="hero-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          poster="/Alburquerque_Auto/bridgeport-hero-landscape.jpg"
+          aria-hidden="true"
+        >
+          <source
+            src="/Alburquerque_Auto/bridgeport-hero-landscape-web.mp4"
+            type="video/mp4"
+          />
+        </video>
         <p className="hero-copy">
           Your car should too. Diagnostics, repairs, maintenance, and
           performance work built for Bridgeport miles—and the people who drive
           them.
         </p>
+
         <div className="hero-actions">
           <a className="button primary" href="#booking">
             Request an appointment <span>↗</span>
