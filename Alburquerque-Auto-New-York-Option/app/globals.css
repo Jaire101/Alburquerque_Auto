@@ -1542,3 +1542,92 @@ footer > p {
     animation: none;
   }
 }
+/* Phone hero-video layout */
+@media (max-width: 700px) {
+  .hero {
+    --phone-video-height: clamp(210px, 56.25vw, 360px);
+
+    min-height: auto;
+    padding:
+      calc(var(--phone-video-height) + 32px)
+      6vw
+      42px;
+
+    background: #050507;
+    animation: none;
+  }
+
+  .hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: var(--phone-video-height);
+
+    object-fit: contain;
+    object-position: center;
+    background: #050507;
+
+    z-index: 0;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: 0;
+
+    height: var(--phone-video-height);
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(5, 5, 7, 0.05) 0%,
+        rgba(5, 5, 7, 0.18) 65%,
+        #050507 100%
+      );
+
+    z-index: 1;
+  }
+
+  .hero > :not(.hero-video):not(.hero-overlay) {
+    position: relative;
+    z-index: 3;
+  }
+
+  .hero h1 {
+    margin: 22px 0;
+    font-size: clamp(52px, 16vw, 76px);
+    line-height: 0.86;
+  }
+
+  .hero-copy {
+    max-width: 100%;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-stats {
+    position: relative;
+    inset: auto;
+
+    display: grid;
+    grid-template-columns: 1fr;
+
+    width: 100%;
+    margin-top: 30px;
+  }
+}
