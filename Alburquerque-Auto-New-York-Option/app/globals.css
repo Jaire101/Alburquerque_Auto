@@ -428,12 +428,65 @@ h2 em {
   border-left: 1px solid #ffffff1d;
 }
 .service-card {
-  min-height: 335px;
-  padding: 32px;
+  position: relative;
+  min-height: 420px;
+  padding: 0;
+  overflow: hidden;
   border-right: 1px solid #ffffff1d;
   border-bottom: 1px solid #ffffff1d;
+  background: #08080c;
+}
+
+.service-image {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.45s ease;
+}
+
+.service-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background: linear-gradient(
+    180deg,
+    rgba(5, 5, 8, 0.08) 10%,
+    rgba(5, 5, 8, 0.5) 52%,
+    rgba(5, 5, 8, 0.96) 100%
+  );
+}
+
+.service-content {
   position: relative;
-  transition: 0.35s;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 420px;
+  padding: 30px;
+}
+
+.service-card:hover .service-image {
+  transform: scale(1.06);
+}
+
+.service-content .service-line {
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+.service-content .service-tag {
+  position: static;
+  display: block;
+  margin-top: 18px;
 }
 .service-card:hover {
   background: #16111f;
@@ -1660,16 +1713,8 @@ footer > p {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(
-      180deg,
-      transparent 40%,
-      rgba(7, 5, 10, 0.88) 100%
-    ),
-    linear-gradient(
-      90deg,
-      rgba(25, 10, 45, 0.25),
-      transparent 60%
-    );
+    linear-gradient(180deg, transparent 40%, rgba(7, 5, 10, 0.88) 100%),
+    linear-gradient(90deg, rgba(25, 10, 45, 0.25), transparent 60%);
   pointer-events: none;
 }
 
@@ -1939,3 +1984,4 @@ footer > p {
     gap: 14px;
   }
 }
+

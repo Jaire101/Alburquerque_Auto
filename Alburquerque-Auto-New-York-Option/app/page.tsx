@@ -8,36 +8,42 @@ const services = [
     title: "Diagnostics",
     copy: "Clear answers before parts get replaced. A focused diagnostic starts at $100.",
     tag: "Starts at $100",
+    image: "/Alburquerque_Auto/diagnostics.png",
   },
   {
     code: "02",
     title: "General Repair",
     copy: "Thoughtful mechanical and electrical repairs across a wide range of makes and models.",
     tag: "$150/hr labor",
+    image: "/Alburquerque_Auto/general-repair.png",
   },
   {
     code: "03",
     title: "Preventive Maintenance",
     copy: "Fluids, filters, brakes, tune-ups, inspections, and maintenance that protects the miles ahead.",
     tag: "Quote required",
+    image: "/Alburquerque_Auto/preventive-maintenance.png",
   },
   {
     code: "04",
     title: "A/C Service",
     copy: "Performance checks, leak diagnosis, repair, and recharge to get your cabin comfortable again.",
     tag: "20 min–day",
+    image: "/Alburquerque_Auto/ac-service.png",
   },
   {
     code: "05",
     title: "Tires & Wheels",
     copy: "Tire mounting and related wheel service handled with care and attention to fitment.",
     tag: "Quote required",
+    image: "/Alburquerque_Auto/tires-wheels.png",
   },
   {
     code: "06",
     title: "Performance",
     copy: "Smart, reliable modifications guided by real diagnostic knowledge—not guesswork.",
     tag: "Consultation first",
+    image: "/Alburquerque_Auto/performance.png",
   },
 ];
 
@@ -101,7 +107,6 @@ export default function Home() {
       <section className="hero" id="home">
         <div className="hero-overlay" aria-hidden="true"></div>
 
-        <div className="hero-glow" aria-hidden="true"></div>
         <div className="eyebrow">
           <span></span> Independent automotive specialist · Bridgeport
         </div>
@@ -224,11 +229,21 @@ export default function Home() {
         <div className="service-grid">
           {services.map((service) => (
             <article className="service-card" key={service.code}>
-              <span className="service-code">{service.code}</span>
-              <div className="service-line"></div>
-              <h3>{service.title}</h3>
-              <p>{service.copy}</p>
-              <span className="service-tag">{service.tag}</span>
+              <img
+                className="service-image"
+                src={service.image}
+                alt={service.title}
+              />
+
+              <div className="service-overlay"></div>
+
+              <div className="service-content">
+                <span className="service-code">{service.code}</span>
+                <div className="service-line"></div>
+                <h3>{service.title}</h3>
+                <p>{service.copy}</p>
+                <span className="service-tag">{service.tag}</span>
+              </div>
             </article>
           ))}
         </div>
@@ -468,33 +483,6 @@ export default function Home() {
           )}
         </form>
       </section>
-
-      <section className="gallery section" aria-labelledby="gallery-title">
-        <div className="section-heading compact">
-          <div>
-            <span className="kicker">WORK IN PROGRESS</span>
-            <h2 id="gallery-title">
-              THE WORK
-              <br />
-              <em>SPEAKS NEXT.</em>
-            </h2>
-          </div>
-          <p>
-            Reserved for real repairs, builds, diagnostics, and
-            behind-the-scenes shop photos as the owner sends them.
-          </p>
-        </div>
-        <div className="gallery-grid">
-          {["DIAGNOSTIC WORK", "REPAIRS", "PERFORMANCE"].map((label, i) => (
-            <div className={`gallery-slot slot-${i + 1}`} key={label}>
-              <span>0{i + 1}</span>
-              <b>{label}</b>
-              <small>Photo coming soon</small>
-            </div>
-          ))}
-        </div>
-      </section>
-
       <section className="contact" id="contact">
         <div className="contact-main">
           <span className="kicker">GET IN TOUCH</span>
