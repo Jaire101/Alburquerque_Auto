@@ -1634,3 +1634,308 @@ footer > p {
     display: none;
   }
 }
+.shop-location-card {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.shop-location-card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.68) contrast(1.05);
+  transition:
+    transform 0.45s ease,
+    filter 0.45s ease;
+}
+
+.shop-location-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      transparent 40%,
+      rgba(7, 5, 10, 0.88) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(25, 10, 45, 0.25),
+      transparent 60%
+    );
+  pointer-events: none;
+}
+
+.shop-location-card:hover img {
+  transform: scale(1.035);
+  filter: brightness(0.82) contrast(1.08);
+}
+
+.map-location-label {
+  position: absolute;
+  left: 40px;
+  bottom: 45px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: white;
+}
+
+.map-location-label strong {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.map-location-label small {
+  color: var(--lav);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.about-visual::after {
+  z-index: 2;
+  pointer-events: none;
+}
+
+.experience-badge {
+  z-index: 4;
+}
+
+@media (max-width: 700px) {
+  .map-location-label {
+    left: 24px;
+    bottom: 28px;
+  }
+
+  .map-location-label strong {
+    font-size: 19px;
+  }
+}
+.about-visual {
+  position: relative;
+  overflow: hidden;
+}
+
+.shop-location-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Makes the entire photo clickable */
+.shop-map-link {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: block;
+  cursor: pointer;
+}
+
+.shop-map-link span {
+  position: absolute;
+  left: 34px;
+  bottom: 34px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: white;
+  text-shadow: 0 2px 12px #000;
+}
+
+.shop-map-link strong {
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.shop-map-link small {
+  color: var(--lav);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+/* Decorative circle must not block clicks */
+.about-visual::before,
+.about-visual::after {
+  pointer-events: none;
+}
+
+/* Keep this visible above the clickable layer */
+.experience-badge {
+  z-index: 11;
+  pointer-events: none;
+}
+/* Live Google Maps location */
+.about-visual {
+  position: relative;
+  min-height: 720px;
+  overflow: hidden;
+  background: #08080a;
+}
+
+.shop-map {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+  display: block;
+  pointer-events: auto;
+}
+
+/* Remove the purple circle and moving light animation */
+.about-visual::before,
+.about-visual::after {
+  display: none !important;
+  content: none !important;
+  animation: none !important;
+}
+
+/* Remove the purple VAST box */
+.experience-badge {
+  display: none !important;
+}
+
+/* Phone layout */
+@media (max-width: 700px) {
+  .about-visual {
+    min-height: 420px;
+  }
+}
+/* Responsive Google Maps About section */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 760px;
+}
+
+/* Complete map block */
+.about-visual {
+  position: relative !important;
+  display: block !important;
+  width: 100%;
+  min-width: 0;
+  min-height: 760px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+
+  background: #08080a !important;
+  background-image: none !important;
+  animation: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove gray design, circle and animations */
+.about-visual::before,
+.about-visual::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  animation: none !important;
+}
+
+/* Remove all previous placeholder elements */
+.photo-placeholder,
+.shop-location-card,
+.shop-location-image,
+.shop-map-link,
+.map-location-label,
+.experience-badge {
+  display: none !important;
+}
+
+/* Map fills its entire side */
+.shop-map {
+  position: absolute !important;
+  inset: 0 !important;
+
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+
+  z-index: 10 !important;
+  pointer-events: auto !important;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .about {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .about-visual {
+    min-height: 500px !important;
+    order: 1;
+  }
+
+  .about-copy {
+    order: 2;
+    padding: 70px 7vw;
+  }
+}
+
+/* Phone */
+@media (max-width: 600px) {
+  .about {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-visual {
+    width: 100%;
+    min-height: 390px !important;
+  }
+
+  .shop-map {
+    min-height: 390px !important;
+  }
+
+  .about-copy {
+    padding: 55px 6vw;
+  }
+
+  .about-copy h2 {
+    font-size: clamp(42px, 13vw, 62px);
+    line-height: 0.92;
+    overflow-wrap: anywhere;
+  }
+
+  .about-copy .lead {
+    margin: 28px 0;
+    padding-left: 16px;
+    font-size: 19px;
+  }
+
+  .about-copy > p:not(.lead) {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .values > div {
+    gap: 14px;
+  }
+}

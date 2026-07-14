@@ -236,18 +236,14 @@ export default function Home() {
 
       <section className="about" id="about">
         <div className="about-visual">
-          <div className="photo-placeholder">
-            <span>SHOP PHOTO</span>
-            <small>Owner image can be added here</small>
-          </div>
-          <div className="experience-badge">
-            <strong>VAST</strong>
-            <span>
-              multi-make
-              <br />
-              expertise
-            </span>
-          </div>
+          <iframe
+            className="shop-map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3003.3346674655245!2d-73.1712414!3d41.170867199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e80ddcc432ac49%3A0x40d6681a1e3ec537!2s29%20Dekalb%20Ave%2C%20Bridgeport%2C%20CT%2006607!5e0!3m2!1sen!2sus!4v1784040805217!5m2!1sen!2sus"
+            title="Alburquerque Auto location on Google Maps"
+            loading="lazy"
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
         <div className="about-copy">
           <span className="kicker">ABOUT ALBURQUERQUE AUTO</span>
