@@ -140,9 +140,6 @@ export default function Home() {
           <a className="button primary" href="#booking">
             Request an appointment <span>↗</span>
           </a>
-          <a className="button secondary" href="tel:+14753492969">
-            Same-day? Call the shop
-          </a>
         </div>
         <div className="hero-stats">
           <div>
