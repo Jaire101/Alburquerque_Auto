@@ -257,11 +257,13 @@ export default function Home() {
             <em>NO RUNAROUND.</em>
           </h2>
           <p className="lead">
-            “Let’s get that issue that’s in need of attention taken care of.”
+            “Let’s get that issue that’s in need of a tissue taken care of!”
           </p>
           <p>
-            Alburquerque Auto was built around a simple idea: Bridgeport clients
-            deserve to understand what is happening with their car. That means
+            We at Alburquerque Auto offer integrity with accurate repairs with
+            affordable pricing to get that issue that’s in need of a tissue
+            taken cared of! We do it all from flat repairs to engine overhaul we
+            will get the job done so you car can finish the journey . That means
             careful diagnostics, honest recommendations, and quality work across
             many different makes and models.
           </p>
