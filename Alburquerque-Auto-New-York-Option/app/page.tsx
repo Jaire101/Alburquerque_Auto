@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/mgogvkbj";
 
 const services = [
   {
@@ -58,9 +59,33 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  function submitBooking(event: FormEvent<HTMLFormElement>) {
+  async function submitBooking(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setSubmitted(true);
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
+
+      form.reset();
+      setSubmitted(true);
+    } catch (error) {
+      console.error(error);
+      alert(
+        "The request could not be sent. Please try again or call the shop.",
+      );
+    }
   }
 
   return (
